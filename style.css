@@ -1,43 +1,46 @@
 @import url("https://cdn.jsdelivr.net/gh/Pariah187/Fonts/pariahfonts.css");
+@import url("nav.css");
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Text', 'Roboto', 'Segoe UI', 'Sans Serif';
 }
 
 body {
-    background-image: url("https://c.pxhere.com/photos/5a/a3/urban_warehouse_factory_building_industrial_industry_structure_space-1170737.jpg!d");
-    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1727976971228-ee2e309c90c1?q=80&w=1923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "SF Pro Text", "Roboto", "Segoe UI", "Inter 18pt";
+    background-size:cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
-h1 {
-    font-family: "Darkmode";
-    position: relative;
-    text-align: center;
-    text-shadow: 8px 8px 5px black;
-    color:white;
-    font-size: 8rem;
-}
-
-p#idk {
-    color: white;
-    font-family: 'Montserrat';
-    font-size:1.5rem;
-    font-weight: 300;
-    text-shadow: 1px 1px 4px black;
-    background-color: rgba(0, 0, 0, 0.835);
-    width: 100%;
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.header {
+.flex {
     display: flex;
+    gap: var(--gap, 1rem);
+
+}
+
+.content {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    flex: 1 1 auto;
+    height: 400px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+h1 {
+    font-family: 'Darkmode';
+    color: white;
+    font-size: 4rem;
+    text-shadow: 1px 1px 3px black;
+}
+
+@media (max-width: 35em) {
+    .content {
+        height:200px;
+    }
 }
